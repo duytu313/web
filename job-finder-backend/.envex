@@ -1,0 +1,18 @@
+# ================= Server =================
+PORT=
+UPLOAD_DIR=
+
+# ================= Database =================
+DB_NAME=
+DB_USER=
+DB_PASS=
+DB_HOST=
+DB_PORT=
+DB_DIALECT=
+
+# ================= Auth =================
+JWT_SECRET=
+
+# ================= Google Cloud =================
+GOOGLE_APPLICATION_CREDENTIALS=
+GOOGLE_PROJECT_ID=

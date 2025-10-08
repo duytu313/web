@@ -3,240 +3,898 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Job Finder</title>
     <link rel="stylesheet" href="style.css" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=lato:wght@400;700&display=swap"
     />
   </head>
   <body>
-    <div class="sidebar">
-      <h1 class="logo">Jobs</h1>
-      <div class="menus">
-        <a href="#"><ion-icon name="home-outline"></ion-icon>Home</ion-ion></a>
-        <a href="#"><ion-icon name="newspaper-outline"></ion-icon>Find Jobs</ion-ion></a>
-        <a href="#"><ion-icon name="status-outline"></ion-icon>Performance</ion-ion></a>
-        <a href="#"><ion-icon name="bookmarks-outline"></ion-icon>Bookmarks</ion-ion></a>
-        <a href="#"><ion-icon name="mail-unread-outline"></ion-icon>Message</ion-ion></a>
-        <a href="#"><ion-icon name="settings-outline"></ion-icon>Setting</ion-ion></a>
-    </div>
-    <div class="profile">
-        <img class="profile-img" src="/images/profile.png">
+    <!-- ================= Sidebar ================= -->
+    <aside class="sidebar">
+      <h1 class="logo" data-translate="Jobs">Jobs</h1>
+      <nav class="menus">
+        <a href="#" id="menu-home"
+          ><ion-icon name="home-outline"></ion-icon
+          ><span data-translate="Home">Home</span></a
+        >
+        <a href="#" id="menu-jobs"
+          ><ion-icon name="briefcase-outline"></ion-icon
+          ><span data-translate="Find Jobs">Find Jobs</span></a
+        >
+        <a href="#" id="menu-performance"
+          ><ion-icon name="stats-chart-outline"></ion-icon
+          ><span data-translate="Performance">Performance</span></a
+        >
+        <a href="#" id="menu-bookmarks"
+          ><ion-icon name="bookmarks-outline"></ion-icon
+          ><span data-translate="Bookmarks">Bookmarks</span></a
+        >
+        <a href="#" id="menu-messages"
+          ><ion-icon name="chatbubble-ellipses-outline"></ion-icon
+          ><span data-translate="Messages">Messages</span></a
+        >
+        <a href="#" id="menu-notifications"
+          ><ion-icon name="notifications-outline"></ion-icon
+          ><span data-translate="Notifications">Notifications</span></a
+        >
+        <a href="#" id="menu-settings"
+          ><ion-icon name="settings-outline"></ion-icon
+          ><span data-translate="Settings">Settings</span></a
+        >
+      </nav>
+      <div class="profile">
+        <img class="profile-img" src="images/profile.png" alt="Profile" />
         <div class="profile-name">
-            <h4>Do Duy Tu</h4>
-            <p>Information and communication technology</p>
+          <h4 id="user-name">Guest</h4>
+          <p id="user-role" data-translate="Visitor">Visitor</p>
         </div>
-    </div>
-    </div>
-    <div class="main">
+      </div>
+      <div class="sidebar-buttons">
+        <button id="btn-login" data-translate="Login">Login</button>
+        <button id="btn-register" data-translate="Register">Register</button>
+        <button id="btn-create-job" data-translate="Post Job">Post Job</button>
+        <button id="btn-logout" data-translate="Logout">Logout</button>
+      </div>
+    </aside>
+
+    <!-- ================= Main Content ================= -->
+    <main class="main">
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <ul>
+          <li>
+            <a
+              href="#"
+              id="menu-cv"
+              data-translate="Create CV"
+              style="font-size: 16px"
+              >Create CV</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              id="menu-tools"
+              data-translate="Tools"
+              style="font-size: 16px"
+              >Tools</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              id="menu-career-guide"
+              data-translate="Career Guide"
+              style="font-size: 16px"
+              >Career Guide</a
+            >
+          </li>
+        </ul>
+        <div class="lang">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg"
+            alt="Vietnam"
+            data-lang="vi"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg"
+            alt="France"
+            data-lang="fr"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+            alt="English"
+            data-lang="en"
+          />
+        </div>
+      </div>
+
+      <!-- Banner -->
+      <!-- <header id="banner" class="header">
+        <div class="logo"><img src="images/usth.png" alt="Logo" /></div>
+        <div class="title">
+          <h1 data-translate="Hanoi University of Science and Technology">
+            Hanoi University of Science and Technology
+          </h1>
+        </div>
+      </header> -->
+
+      <!-- ================= Jobs Section ================= -->
+      <section id="jobs-section" class="finds" style="display: none">
+        <h2 data-translate="Attractive job">Attractive job</h2>
         <div class="main-header">
-            <ion-icon class="menu-bar" name="menu-outline"></ion-icon>
-            <div class="search">
-                <input type="text" placeholder="Search your best job here...">
-                <button class="btn-search"><ion-icon name="search-outline"></ion-icon></button>
-            </div>
-            <div class="filter-wrapper">
-                <p>Recommendation</p>
-                <div class="filter">
-                    <button class="btn-filter">Data Science</button>
-                    <button class="btn-filter">Data Engineer</button>
-                    <button class="btn-filter">Data Analyst</button>
-                    <button class="btn-filter">Data Visualization</button>
-                    <button class="btn-filter">CRM Analyst</button>
-                
-                </div>
-                <div class="sort">
-                    <p>Sort</p>
-                    <div class="sort-list">
-                        <select name="" id="">
-                            <option value="0">All</option>
-                            <option value="1">Newest Post</option>
-                            <option value="2">Oldest Post</option>
-                            <option value="3">Most Relevant</option>
-                            <option value="4">Highest Paid</option>
-                        </select>
-                    </div>
-
-                </div>
-    
-            </div>
+          <ion-icon class="menu-bar" name="menu-outline"></ion-icon>
+          <div class="search-filters">
+            <input
+              id="filter-keyword"
+              type="text"
+              placeholder="Keyword..."
+              data-translate="Keyword..."
+            />
+            <input
+              id="filter-location"
+              type="text"
+              placeholder="Location..."
+              data-translate="Location..."
+            />
+            <input
+              id="filter-salary"
+              type="number"
+              placeholder="Min Salary..."
+              data-translate="Min Salary..."
+            />
+            <button id="btn-filter" data-translate="Filter">Filter</button>
+            <select id="sort-select">
+              <option value="newest" data-translate="Newest">Newest</option>
+              <option value="oldest" data-translate="Oldest">Oldest</option>
+              <option value="highest" data-translate="Highest Paid">
+                Highest Paid
+              </option>
+            </select>
+          </div>
         </div>
-        <div class="wrapper">
-            <div class="card">
-                <div class="card-left blue-bg">
-                <img src="/images/google.png" alt="">
-                </div>
-                <div class="card-center">
-                    <h3>Google</h3>
-                    <p class="card-detail">Data Science,Data Engineer</p>
-                    <p class="card-loc"><ion-icon name="location-outline"></ion-icon>Ha Noi</p>
-                </div>
-                <div class="card-sub">
-                    <p><ion-icon name="today-outline"></ion-icon>1 mins ago</p>
-                    <p><ion-icon name="hourglass-outline"></ion-icon>Full time</p>
-                    <p><ion-icon name="people-outline"></ion-icon>200 Applicants</p>
-                </div>
-                   <div class="card-right">
-                <div class="card-tag">
-                    <h5>Division</h5>
-                    <a href="#">Data Engineer</a>
+        <div class="wrapper"></div>
+      </section>
 
-                </div>
-                <div class="card-salary">
-                    <p><b>$350k</b><span>/ year</span></p>
-                </div>
-            </div>
-        </div>
+      <!-- ================= Home Section ================= -->
+      <section id="home-section" class="news">
+        <h2 data-translate="Featured News">Featured News</h2>
+        <div class="news-wrapper"></div>
 
-        <div class="card">
-                <div class="card-left yellow-bg">
-                <img src="/images/tiktok.png" alt="">
-                </div>
-                <div class="card-center">
-                    <h3>Tiktok</h3>
-                    <p class="card-detail">Data Analyst,Product Analyst</p>
-                    <p class="card-loc"><ion-icon name="location-outline"></ion-icon>Ha Noi</p>
-                </div>
-                <div class="card-sub">
-                    <p><ion-icon name="today-outline"></ion-icon>1 hour ago</p>
-                    <p><ion-icon name="hourglass-outline"></ion-icon>Full time</p>
-                    <p><ion-icon name="people-outline"></ion-icon>130 Applicants</p>
-                </div>
-                   <div class="card-right">
-                <div class="card-tag">
-                    <h5>Division</h5>
-                    <a href="#">Engineer,Product</a>
+        <h2 data-translate="Top Employers">Top Employers</h2>
+        <div class="employers-wrapper"></div>
 
-                </div>
-                <div class="card-salary">
-                    <p><b>$485k</b><span>/ year</span></p>
-                </div>
-            </div>
-        </div>
+        <h2 data-translate="Hot Sectors">Hot Sectors</h2>
+        <div class="categories-wrapper"></div>
+      </section>
 
-        <div class="card">
-                <div class="card-left red-bg">
-                <img src="/images/youtube.png" alt="">
-                </div>
-                <div class="card-center">
-                    <h3>Youtube</h3>
-                    <p class="card-detail">Data Science,Data Engineer</p>
-                    <p class="card-loc"><ion-icon name="location-outline"></ion-icon>Ha Noi</p>
-                </div>
-                <div class="card-sub">
-                    <p><ion-icon name="today-outline"></ion-icon>1 mins ago</p>
-                    <p><ion-icon name="hourglass-outline"></ion-icon>Full time</p>
-                    <p><ion-icon name="people-outline"></ion-icon>400 Applicants</p>
-                </div>
-                   <div class="card-right">
-                <div class="card-tag">
-                    <h5>Division</h5>
-                    <a href="#">Data Engineer</a>
+      <!-- ================= Performance Section ================= -->
+      <section
+        id="performance-section"
+        class="performance"
+        style="display: none"
+      >
+        <h2 data-translate="Applicant Statistics" class="section-title">
+          Applicant Statistics
+        </h2>
 
-                </div>
-                <div class="card-salary">
-                    <p><b>$350k</b><span>/ year</span></p>
-                </div>
-            </div>
-        </div>
-         <div class="card">
-                <div class="card-left purple-bg">
-                <img src="/images/apple.png" alt="">
-                </div>
-                <div class="card-center">
-                    <h3>Apple</h3>
-                    <p class="card-detail">UI UX Designer</p>
-                    <p class="card-loc"><ion-icon name="location-outline"></ion-icon>Ha Noi</p>
-                </div>
-                <div class="card-sub">
-                    <p><ion-icon name="today-outline"></ion-icon>1 hour ago</p>
-                    <p><ion-icon name="hourglass-outline"></ion-icon>Full time</p>
-                    <p><ion-icon name="people-outline"></ion-icon>135Applicants</p>
-                </div>
-                   <div class="card-right">
-                <div class="card-tag">
-                    <h5>Division</h5>
-                    <a href="#">Designer App</a>
+        <!-- Stats Cards -->
+        <div
+          class="stats-cards"
+          style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 30px"
+        >
+          <div
+            class="card"
+            style="
+              flex: 1;
+              min-width: 180px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+              text-align: center;
+            "
+          >
+            <h3
+              data-translate="Total Applicants"
+              style="margin-bottom: 10px; color: #4c50d3"
+            >
+              Total Applicants
+            </h3>
+            <p id="total-applicants" style="font-size: 24px; font-weight: 600">
+              0
+            </p>
+          </div>
 
-                </div>
-                <div class="card-salary">
-                    <p><b>$250k</b><span>/ year</span></p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-                <div class="card-left blue-bg">
-                <img src="/images/amazon.png" alt="">
-                </div>
-                <div class="card-center">
-                    <h3>Amazon</h3>
-                    <p class="card-detail">Customer Care</p>
-                    <p class="card-loc"><ion-icon name="location-outline"></ion-icon>Ha Noi</p>
-                </div>
-                <div class="card-sub">
-                    <p><ion-icon name="today-outline"></ion-icon>2 hour ago</p>
-                    <p><ion-icon name="hourglass-outline"></ion-icon>Full time</p>
-                    <p><ion-icon name="people-outline"></ion-icon>200 Applicants</p>
-                </div>
-                   <div class="card-right">
-                <div class="card-tag">
-                    <h5>Division</h5>
-                    <a href="#">Data Engineer</a>
+          <div
+            class="card"
+            style="
+              flex: 1;
+              min-width: 180px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+              text-align: center;
+            "
+          >
+            <h3
+              data-translate="Jobs Posted"
+              style="margin-bottom: 10px; color: #4c50d3"
+            >
+              Jobs Posted
+            </h3>
+            <p id="jobs-posted" style="font-size: 24px; font-weight: 600">0</p>
+          </div>
 
-                </div>
-                <div class="card-salary">
-                    <p><b>$350k</b><span>/ year</span></p>
-                </div>
-            </div>
+          <div
+            class="card"
+            style="
+              flex: 1;
+              min-width: 180px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+              text-align: center;
+            "
+          >
+            <h3
+              data-translate="Applications Today"
+              style="margin-bottom: 10px; color: #4c50d3"
+            >
+              Applications Today
+            </h3>
+            <p
+              id="applications-today"
+              style="font-size: 24px; font-weight: 600"
+            >
+              0
+            </p>
+          </div>
         </div>
 
+        <!-- Chart Section -->
+        <div
+          class="chart-section"
+          style="
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <h3
+            data-translate="Applications per Job"
+            style="margin-bottom: 15px; color: #4c50d3"
+          >
+            Applications per Job
+          </h3>
+          <canvas id="applicationsChart" width="600" height="300"></canvas>
         </div>
-    </div>
+      </section>
 
+      <!-- ================= Bookmarks Section ================= -->
+      <section id="bookmarks-section" style="display: none">
+        <h2 data-translate="Saved Jobs">Saved Jobs</h2>
+        <div class="bookmarks-wrapper"></div>
+        <p
+          id="no-bookmarks"
+          style="display: none"
+          data-translate="You have no saved jobs."
+        >
+          You have no saved jobs.
+        </p>
+      </section>
 
-    <div class="detail">
-        <ion-icon class="close-detail" name="close-outline"></ion-icon>
-        <div class="detail-header">
-            <img src="/images/google.png" alt="">
-            <h2>Google</h2>
-            <p>Data Science</p>
+      <!-- ================= Messages Section ================= -->
+      <section id="messages-section" style="display: none">
+        <h2 data-translate="Messages">Messages</h2>
+        <div class="messages-wrapper"></div>
+        <p id="no-messages" style="display: none" data-translate="No messages.">
+          No messages.
+        </p>
+      </section>
+
+      <!-- ================= Notifications Section ================= -->
+      <section id="notifications-section" style="display: none">
+        <h2 data-translate="Notifications">Notifications</h2>
+        <div class="notifications-wrapper"></div>
+        <p
+          id="no-notifications"
+          style="display: none"
+          data-translate="No notifications."
+        >
+          No notifications.
+        </p>
+      </section>
+
+      <!-- ================= CV Section ================= -->
+      <section id="cv-section" style="display: none">
+        <h2 data-translate="Enter your information">Enter your information</h2>
+        <form id="cvForm">
+          <label data-translate="Full Name:">Full Name:</label
+          ><input type="text" id="fullName" required />
+          <label data-translate="Email:">Email:</label
+          ><input type="email" id="email" required />
+          <label data-translate="Phone:">Phone:</label
+          ><input type="text" id="phone" />
+          <label data-translate="Address:">Address:</label
+          ><input type="text" id="address" />
+          <label data-translate="Summary:">Summary:</label
+          ><textarea id="summary"></textarea>
+          <label data-translate="Experience:">Experience:</label
+          ><textarea id="experience"></textarea>
+          <label data-translate="Education:">Education:</label
+          ><textarea id="education"></textarea>
+          <label data-translate="Skills:">Skills:</label
+          ><textarea id="skills"></textarea>
+          <button type="submit" data-translate="Create CV">Create CV</button>
+        </form>
+      </section>
+
+      <!-- ================= CV Preview ================= -->
+      <section id="cvPreview" style="display: none">
+        <h2 data-translate="CV Preview">CV Preview</h2>
+        <div class="cv-content">
+          <h3 id="cvName"></h3>
+          <p id="cvContact"></p>
+          <p id="cvSummary"></p>
+          <h4 data-translate="Work Experience">Work Experience</h4>
+          <ul id="cvExperience"></ul>
+          <h4 data-translate="Education">Education</h4>
+          <ul id="cvEducation"></ul>
+          <h4 data-translate="Skills">Skills</h4>
+          <ul id="cvSkills"></ul>
         </div>
-        <hrc class="divider">
-            <div class="detail-desc">
-                <div class="about">
-                    <h4>About Company</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur officia similique laboriosam ea ad. Eos minima sunt recusandae placeat harum aperiam, ipsam aliquid iste autem tempora officia. Placeat, temporibus ea!</p>
-                    <a href="#">Read more</a>
-                </div>
-                <hr class="divider">
-                <div class="qualification">
-                    <h4>Qualification</h4>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo et maiores inventore, ducimus quod voluptates totam fuga sed fugit, eveniet exercitationem. Iure sapiente asperiores tempora facilis nam at inventore atque?</li>
-                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit voluptas ad voluptatibus eius hic placeat beatae iure perspiciatis soluta alias officiis cupiditate et reiciendis voluptates atque, eaque adipisci. Id, dolore!</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam velit, ipsa ipsum facilis soluta repellat neque at ea eligendi aspernatur quas. Quibusdam eaque ut consequuntur est aspernatur quaerat? At, dolore!</li>
+        <button id="editCV" data-translate="Edit CV">Edit CV</button>
+      </section>
 
-                    </ul>
-                </div>
-                <hr class="divider">
-                <div class="detail-btn">
-                    <button class="btn-apply">Apply Now</button>
-                    <button class="btn-save">Save Job</button>
-                </div>
+      <!-- ================= Tools Section ================= -->
+      <section id="tools-section" style="display: none">
+        <h2 data-translate="Support Tools">Support Tools</h2>
+        <div class="tools-wrapper">
+          <div class="tool-card">
+            <h3 data-translate="CV Builder">CV Builder</h3>
+            <p data-translate="Create professional CV directly on the website.">
+              Create professional CV directly on the website.
+            </p>
+            <button
+              onclick="location.href='#cv-section'"
+              data-translate="Open CV"
+            >
+              Open CV
+            </button>
+          </div>
+          <div class="tool-card">
+            <h3 data-translate="Skill Test">Skill Test</h3>
+            <p data-translate="Test programming, marketing, design skills...">
+              Test programming, marketing, and design skills...
+            </p>
+            <button data-translate="Open Tool">Open Tool</button>
+          </div>
+          <div class="tool-card">
+            <h3 data-translate="Salary Estimator">Salary Estimator</h3>
+            <p data-translate="Calculate suitable salary.">
+              Calculate suitable salary.
+            </p>
+            <button data-translate="Open Tool">Open Tool</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Settings Section ================= -->
+      <section id="settings-section" style="display: none">
+        <h2 data-translate="Settings">Settings</h2>
+        <div class="settings-wrapper">
+          <div class="settings-card">
+            <h3 data-translate="Profile">Profile</h3>
+            <form id="profile-settings-form">
+              <label for="settings-name" data-translate="Name:">Name:</label
+              ><input type="text" id="settings-name" />
+              <label for="settings-email" data-translate="Email:">Email:</label
+              ><input type="email" id="settings-email" />
+              <label for="settings-password" data-translate="Password:"
+                >Password:</label
+              ><input type="password" id="settings-password" />
+              <button type="submit" data-translate="Update Profile">
+                Update Profile
+              </button>
+            </form>
+          </div>
+          <div class="settings-card">
+            <h3 data-translate="Notifications">Notifications</h3>
+            <form id="notification-settings-form">
+              <label
+                ><input type="checkbox" id="notify-email" />
+                <span data-translate="Email notifications"
+                  >Email notifications</span
+                ></label
+              >
+              <label
+                ><input type="checkbox" id="notify-sms" />
+                <span data-translate="SMS notifications"
+                  >SMS notifications</span
+                ></label
+              >
+              <label
+                ><input type="checkbox" id="notify-push" />
+                <span data-translate="Push notifications"
+                  >Push notifications</span
+                ></label
+              >
+              <button type="submit" data-translate="Save Preferences">
+                Save Preferences
+              </button>
+            </form>
+          </div>
+          <div class="settings-card">
+            <h3 data-translate="Account">Account</h3>
+            <button
+              id="btn-delete-account"
+              style="
+                background-color: #e74c3c;
+                color: white;
+                padding: 8px 12px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+              "
+              data-translate="Delete Account"
+            >
+              Delete Account
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Career Guide ================= -->
+      <section id="career-guide" class="career-guide" style="display: none">
+        <h2 data-translate="Career Guide">Career Guide</h2>
+        <div class="guide-wrapper">
+          <div class="guide-card">
+            <h3 data-translate="Information Technology">
+              Information Technology
+            </h3>
+            <p
+              data-translate="High job opportunities, programming and system management skills."
+            >
+              High job opportunities, programming and system management skills.
+            </p>
+            <ul>
+              <li data-translate="Frontend Developer">Frontend Developer</li>
+              <li data-translate="Backend Developer">Backend Developer</li>
+              <li data-translate="DevOps Engineer">DevOps Engineer</li>
+            </ul>
+          </div>
+          <div class="guide-card">
+            <h3 data-translate="Marketing">Marketing</h3>
+            <p
+              data-translate="Creative sector, need communication and analytical skills."
+            >
+              Creative sector, requires communication and analytical skills.
+            </p>
+            <ul>
+              <li data-translate="Digital Marketer">Digital Marketer</li>
+              <li data-translate="SEO Specialist">SEO Specialist</li>
+            </ul>
+          </div>
+          <div class="guide-card">
+            <h3 data-translate="Design">Design</h3>
+            <p
+              data-translate="Graphic and UI/UX design jobs are in high demand."
+            >
+              Graphic and UI/UX design jobs are in high demand.
+            </p>
+            <ul>
+              <li data-translate="UI/UX Designer">UI/UX Designer</li>
+              <li data-translate="Graphic Designer">Graphic Designer</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- POPUP LOGIN/REGISTER -->
+      <div class="popup" id="popup-auth" style="display: none">
+        <div class="popup-content">
+          <span class="close-popup">&times;</span>
+          <h2 id="auth-title">Login</h2>
+          <form id="auth-form">
+            <input
+              type="text"
+              id="auth-name"
+              placeholder="Name"
+              style="display: none"
+            />
+            <select id="role-select" style="display: none">
+              <option value="employer">Employer</option>
+              <option value="jobseeker">Job Seeker</option>
+            </select>
+            <input type="email" id="auth-email" placeholder="Email" required />
+            <input
+              type="password"
+              id="auth-password"
+              placeholder="Password"
+              required
+            />
+            <p id="auth-error" style="color: red"></p>
+            <button type="submit" id="auth-submit">Login</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- POPUP CREATE/EDIT JOB -->
+      <div class="popup" id="popup-job" style="display: none">
+        <div class="popup-content">
+          <span class="close-job-popup">&times;</span>
+          <h2>Create/Edit Job</h2>
+          <form id="jobForm">
+            <input type="text" name="title" placeholder="Job Title" required />
+            <input type="text" name="company" placeholder="Company" required />
+            <input type="text" name="location" placeholder="Location" />
+            <input type="number" name="salary" placeholder="Salary" />
+            <input type="text" name="type" placeholder="Job Type" />
+            <textarea name="description" placeholder="Description"></textarea>
+            <textarea
+              name="qualification"
+              placeholder="Qualification (comma or newline separated)"
+            ></textarea>
+            <input type="file" name="logo" accept="image/*" />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Job Detail Popup -->
+      <div id="popup-detail" class="popup" style="display: none">
+        <div class="detail">
+          <ion-icon class="close-detail" name="close-outline"></ion-icon>
+          <div class="detail-header">
+            <img id="detail-logo" src="images/default.png" alt="Logo" />
+            <h2 id="detail-company">Company</h2>
+            <p id="detail-title">Job Title</p>
+          </div>
+          <hr class="divider" />
+          <div class="detail-desc">
+            <div class="about">
+              <h4>About Company</h4>
+              <p id="detail-description">Company description...</p>
             </div>
+            <hr class="divider" />
+            <div class="qualification">
+              <h4>Qualification</h4>
+              <ul id="detail-qualification"></ul>
+            </div>
+            <hr class="divider" />
+            <div class="detail-btn">
+              <button class="btn-apply">Apply Now</button>
+              <button class="btn-save">Save Job</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    </div>
+      <!-- Chat Widget -->
+      <div id="chat-widget">
+        <div id="chat-header">Chat with us</div>
+        <div id="chat-body">
+          <div id="chat-messages"></div>
+          <input type="text" id="chat-input" placeholder="Type a message..." />
+          <button id="chat-send">Send</button>
+        </div>
+      </div>
+
+      <!-- Chat Toggle Button -->
+      <div id="chat-toggle">💬</div>
+
+      <!-- Help Widget -->
+      <div id="help-widget">
+        <div id="help-toggle">Help</div>
+        <div id="help-chat">
+          <div id="help-messages"></div>
+          <input
+            type="text"
+            id="help-input"
+            placeholder="Type your question..."
+          />
+          <button id="help-send">Send</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- ================= Scripts ================= -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- ================= LibreTranslate ================= -->
+    <script>
+      const LIBRE_URL = "https://libretranslate.de/translate";
+
+      async function translatePage(targetLang) {
+        const elems = document.querySelectorAll("[data-translate]");
+        elems.forEach(async (el) => {
+          const original = el.dataset.original || el.innerText;
+          el.dataset.original = original;
+          try {
+            const res = await fetch(LIBRE_URL, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                q: original,
+                source: "auto",
+                target: targetLang,
+                format: "text",
+              }),
+            });
+            const data = await res.json();
+            el.innerText = data.translatedText;
+          } catch (err) {
+            console.error("Translation error:", err);
+          }
+        });
+      }
+
+      document.querySelectorAll(".lang img").forEach((img) => {
+        img.addEventListener("click", () => {
+          const lang = img.getAttribute("data-lang");
+          translatePage(lang);
+        });
+      });
+    </script>
+
+    <script src="app.js"></script>
+
+    <script>
+      /* ================= Chat Widget ================= */
+      const chatWidget = document.getElementById("chat-widget");
+      const chatToggle = document.getElementById("chat-toggle");
+      chatToggle.addEventListener("click", () => {
+        chatWidget.style.display =
+          chatWidget.style.display === "flex" ? "none" : "flex";
+      });
+
+      const chatInput = document.getElementById("chat-input");
+      const chatSend = document.getElementById("chat-send");
+      const chatMessages = document.getElementById("chat-messages");
+
+      function appendMessage(text, sender) {
+        const msg = document.createElement("div");
+        msg.classList.add("message", sender);
+        msg.innerText = text;
+        chatMessages.appendChild(msg);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      chatSend.addEventListener("click", () => {
+        const text = chatInput.value.trim();
+        if (!text) return;
+        appendMessage(text, "user");
+        chatInput.value = "";
+        setTimeout(() => {
+          appendMessage("Cảm ơn bạn, chúng tôi sẽ phản hồi sớm!", "bot");
+        }, 500);
+      });
+
+      chatInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") chatSend.click();
+      });
+
+      /* ================= Help Chat ================= */
+      const helpWidget = document.getElementById("help-widget");
+      const helpToggle = document.getElementById("help-toggle");
+      const helpChat = document.getElementById("help-chat");
+      const helpInput = document.getElementById("help-input");
+      const helpSend = document.getElementById("help-send");
+      const helpMessages = document.getElementById("help-messages");
+
+      helpToggle.addEventListener("click", () => {
+        helpChat.style.display =
+          helpChat.style.display === "flex" ? "none" : "flex";
+        helpChat.style.flexDirection = "column";
+      });
+
+      function appendHelpMessage(text, sender) {
+        const msg = document.createElement("div");
+        msg.classList.add("message", sender);
+        msg.innerText = text;
+        helpMessages.appendChild(msg);
+        helpMessages.scrollTop = helpMessages.scrollHeight;
+      }
+
+      helpSend.addEventListener("click", () => {
+        const text = helpInput.value.trim();
+        if (!text) return;
+        appendHelpMessage(text, "user");
+        helpInput.value = "";
+        setTimeout(() => {
+          appendHelpMessage("Cảm ơn bạn! Hỗ trợ sẽ phản hồi sớm.", "bot");
+        }, 500);
+      });
+
+      helpInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") helpSend.click();
+      });
+
+      /* ================= Dynamic Data ================= */
+      let oldNews = [];
+      let oldEmployers = [];
+      let oldSectors = [];
+
+      /* -------- Tin tức động từ Google News RSS -------- */
+      async function fetchNews() {
+        const rssUrl =
+          "https://news.google.com/rss/search?q=programming+jobs&hl=en-US&gl=US&ceid=US:en";
+        const res = await fetch(
+          `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(
+            rssUrl
+          )}`
+        );
+        const data = await res.json();
+        const newsWrapper = document.querySelector(".news-wrapper");
+        newsWrapper.innerHTML = "";
+        const newItems = data.items.slice(0, 5);
+
+        newItems.forEach((item) => {
+          const card = document.createElement("div");
+          card.classList.add("news-card");
+          card.innerHTML = `
+            <img src="${
+              item.enclosure
+                ? item.enclosure.link
+                : "images/news-placeholder.jpg"
+            }" alt="${item.title}" />
+            <div class="news-content">
+                <h3>${item.title}</h3>
+                <p>${item.description}</p>
+                <span class="news-date">${new Date(
+                  item.pubDate
+                ).toLocaleDateString()}</span>
+            </div>
+        `;
+          newsWrapper.appendChild(card);
+        });
+
+        if (
+          JSON.stringify(oldNews) !==
+          JSON.stringify(newItems.map((i) => i.title))
+        ) {
+          if (oldNews.length > 0) alert("Có tin tức mới!");
+          oldNews = newItems.map((i) => i.title);
+        }
+      }
+
+      /* -------- Nhà tuyển dụng động -------- */
+      async function fetchEmployers() {
+        const res = await fetch("data/employers.json");
+        const employers = await res.json();
+        const wrapper = document.querySelector(".employers-wrapper");
+        wrapper.innerHTML = "";
+        employers.forEach((emp) => {
+          const card = document.createElement("div");
+          card.classList.add("employer-card");
+          card.innerHTML = `
+            <img src="${emp.logo}" alt="${emp.company}" />
+            <div class="employer-info">
+                <h3>${emp.company}</h3>
+                <p>Industry: ${emp.industry}</p>
+                <p>Positions Open: ${emp.positions}</p>
+            </div>
+        `;
+          wrapper.appendChild(card);
+        });
+
+        if (JSON.stringify(oldEmployers) !== JSON.stringify(employers)) {
+          if (oldEmployers.length > 0)
+            alert("Danh sách nhà tuyển dụng cập nhật!");
+          oldEmployers = employers;
+        }
+      }
+
+      /* -------- Ngành hot động -------- */
+      async function fetchSectors() {
+        const res = await fetch("data/sectors.json");
+        const sectors = await res.json();
+        const wrapper = document.querySelector(".categories-wrapper");
+        wrapper.innerHTML = "";
+        sectors.forEach((sec) => {
+          const card = document.createElement("div");
+          card.classList.add("category-card");
+          card.innerHTML = `
+            <ion-icon name="${sec.icon}"></ion-icon>
+            <h3>${sec.name}</h3>
+            <p>${sec.jobs} jobs</p>
+        `;
+          wrapper.appendChild(card);
+        });
+
+        if (JSON.stringify(oldSectors) !== JSON.stringify(sectors)) {
+          if (oldSectors.length > 0) alert("Ngành hot cập nhật!");
+          oldSectors = sectors;
+        }
+      }
+
+      /* -------- Load tất cả -------- */
+      async function loadAll() {
+        await fetchNews();
+        await fetchEmployers();
+        await fetchSectors();
+      }
+
+      loadAll();
+      setInterval(loadAll, 300000); // Cập nhật mỗi 5 phút
+
+      /* ================= Performance Stats ================= */
+      async function loadPerformanceStatsFromJobs() {
+        try {
+          const jobElems = document.querySelectorAll("#jobs-section .job-card");
+          const jobs = Array.from(jobElems).map((el, idx) => ({
+            id: el.dataset.id || idx,
+            title: el.querySelector(".job-title").innerText,
+          }));
+
+          const appsRes = await fetch("/api/applications");
+          const applications = await appsRes.json();
+
+          document.getElementById("total-applicants").innerText =
+            applications.length;
+          document.getElementById("jobs-posted").innerText = jobs.length;
+
+          const today = new Date().toISOString().split("T")[0];
+          const applicationsToday = applications.filter((app) =>
+            app.createdAt.startsWith(today)
+          ).length;
+          document.getElementById("applications-today").innerText =
+            applicationsToday;
+
+          const jobLabels = jobs.map((j) => j.title);
+          const jobApplicationsCount = jobs.map(
+            (j) => applications.filter((a) => a.jobId == j.id).length
+          );
+
+          const ctx = document
+            .getElementById("applicationsChart")
+            .getContext("2d");
+          if (window.performanceChart) window.performanceChart.destroy();
+
+          window.performanceChart = new Chart(ctx, {
+            type: "bar",
+            data: {
+              labels: jobLabels,
+              datasets: [
+                {
+                  label: "Applications",
+                  data: jobApplicationsCount,
+                  backgroundColor: "#4c50d3",
+                  borderRadius: 6,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              plugins: { legend: { display: false } },
+              scales: {
+                x: { title: { display: true, text: "Job Title" } },
+                y: {
+                  title: { display: true, text: "Applications" },
+                  beginAtZero: true,
+                },
+              },
+            },
+          });
+        } catch (err) {
+          console.error("❌ Error loading Performance from Jobs:", err);
+        }
+      }
+    </script>
   </body>
-  <script
-    type="module"
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-  ></script>
-  <script
-    nomodule
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-  ></script>
-
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="app.js"></script>
 </html>

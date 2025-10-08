@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Information Technology",
+    "jobs": 120,
+    "icon": "code-slash-outline"
+  },
+  { "name": "Marketing", "jobs": 85, "icon": "bar-chart-outline" },
+  { "name": "Design", "jobs": 60, "icon": "color-palette-outline" },
+  { "name": "Healthcare", "jobs": 40, "icon": "medkit-outline" },
+  { "name": "Finance", "jobs": 75, "icon": "cash-outline" }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "company": "Google",
+    "industry": "Technology",
+    "positions": 25,
+    "logo": "images/company1.png"
+  },
+  {
+    "company": "Apple",
+    "industry": "Technology",
+    "positions": 18,
+    "logo": "images/company2.png"
+  },
+  {
+    "company": "Samsung",
+    "industry": "Electronics",
+    "positions": 12,
+    "logo": "images/company3.png"
+  }
+]
