@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tạo Mẫu CV Xin Việc - JobsLink.vn</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ================= Global ================= */
+      body {
+        margin: 0;
+        font-family: "Lato", sans-serif;
+        background: #f5f6fb;
+        color: #1e1e1e;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: #4c50d3;
+      }
+
+      a:hover {
+        color: #ffce00;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #4c50d3;
+        margin-bottom: 15px;
+      }
+
+      h2::after {
+        content: "";
+        width: 50px;
+        height: 3px;
+        background: #ffce00;
+        display: block;
+        margin-top: 6px;
+        border-radius: 2px;
+      }
+
+      /* ================= Header ================= */
+      header {
+        background: #4c50d3;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 32px;
+      }
+
+      /* ================= Intro ================= */
+      .intro {
+        text-align: center;
+        padding: 40px 20px;
+        max-width: 900px;
+        margin: 0 auto 50px;
+      }
+
+      .intro p {
+        font-size: 18px;
+        color: #333;
+      }
+
+      /* ================= Templates Section ================= */
+      .cv-templates {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 60px;
+      }
+
+      .cv-card {
+        background: #fff;
+        flex: 1 1 200px;
+        max-width: 220px;
+        border-radius: 16px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        cursor: pointer;
+      }
+
+      .cv-card:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .cv-card img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 12px;
+      }
+
+      .cv-card h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #4c50d3;
+      }
+
+      /* ================= Guide Section ================= */
+      .guide {
+        padding: 40px 20px;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        margin-bottom: 60px;
+      }
+
+      .guide h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .guide ol {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      .guide li {
+        margin-bottom: 15px;
+      }
+
+      .guide p {
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      /* ================= Tips Section ================= */
+      .tips {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 60px;
+      }
+
+      .tip-card {
+        background: linear-gradient(135deg, #4c50d3, #6f7aff);
+        color: #fff;
+        padding: 25px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease, box-shadow 0.4s ease,
+          background 0.4s ease;
+      }
+
+      .tip-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        background: linear-gradient(135deg, #3b40a0, #5c63ff);
+        box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      .tip-card h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+        font-weight: 600;
+      }
+
+      /* ================= Footer ================= */
+      footer {
+        background: #4c50d3;
+        color: #fff;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      footer a {
+        color: #ffce00;
+      }
+
+      /* ================= Responsive ================= */
+      @media (max-width: 992px) {
+        .cv-templates {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .tips {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Tạo Mẫu CV Xin Việc</h1>
+    </header>
+
+    <!-- Intro -->
+    <section class="intro container">
+      <p>
+        Ấn tượng và chuyên nghiệp. Tạo mẫu CV nhanh chóng và hoàn toàn miễn phí
+        cho cuộc hành trình mới của bạn. Chỉ vài thao tác đơn giản, bạn đã có
+        thể tạo cho mình một bản CV chuyên nghiệp và dễ dàng lọt vào “Mắt xanh”
+        của Nhà tuyển dụng.
+      </p>
+    </section>
+
+    <!-- Templates -->
+    <section class="container">
+      <h2>Tất cả templates</h2>
+      <div class="cv-templates">
+        <div class="cv-card">
+          <img src="images/cv1.jpg" alt="CV Abstraction" />
+          <h3>CV Abstraction</h3>
+        </div>
+        <div class="cv-card">
+          <img src="images/cv2.jpg" alt="CV Circum" />
+          <h3>CV Circum</h3>
+        </div>
+        <div class="cv-card">
+          <img src="images/cv3.jpg" alt="CV Cerulean Blue" />
+          <h3>CV Cerulean Blue</h3>
+        </div>
+        <div class="cv-card">
+          <img src="images/cv4.jpg" alt="CV Phá cách" />
+          <h3>CV Phá cách</h3>
+        </div>
+        <!-- Add more CV cards similarly -->
+      </div>
+    </section>
+
+    <!-- Guide Section -->
+    <section class="guide container">
+      <h2>Hướng dẫn tạo CV hiệu quả</h2>
+      <ol>
+        <li>
+          <strong>Chọn mẫu CV phù hợp:</strong> Chọn CV phản ánh con người và
+          công việc mong muốn.
+        </li>
+        <li>
+          <strong>Điền thông tin cần thiết:</strong> Thêm thông tin liên hệ, học
+          vấn, kinh nghiệm, kỹ năng.
+        </li>
+        <li>
+          <strong>Rà soát lỗi:</strong> Đọc lại, kiểm tra chính tả, định dạng và
+          lưu PDF.
+        </li>
+        <li>
+          <strong>Gửi CV qua email:</strong> Sử dụng tên thật làm tên file, nội
+          dung email lịch sự và kèm thông tin liên hệ.
+        </li>
+      </ol>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="container">
+      <h2>Một số lưu ý khi viết CV</h2>
+      <div class="tips">
+        <div class="tip-card">
+          <h3>Sử dụng ngôn ngữ chủ động</h3>
+          <p>Ví dụ: “Đã đạt được”, “Hoàn thành” để mô tả kinh nghiệm.</p>
+        </div>
+        <div class="tip-card">
+          <h3>Tạo điểm nhấn</h3>
+          <p>
+            Đặt các trải nghiệm quan trọng lên đầu và in đậm các thông tin nổi
+            bật.
+          </p>
+        </div>
+        <div class="tip-card">
+          <h3>Sử dụng số liệu</h3>
+          <p>Ví dụ: “Vượt doanh số bán hàng 15%” để tăng sức thuyết phục.</p>
+        </div>
+        <div class="tip-card">
+          <h3>Từ khóa khớp mô tả công việc</h3>
+          <p>Đảm bảo CV chứa các từ khóa liên quan đến công việc ứng tuyển.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; 2025 CareerLink.vn | Email:
+        <a href="mailto:contact@careerlink.vn">contact@careerlink.vn</a> | Điện
+        thoại: 028 3813 0501
+      </p>
+    </footer>
+  </body>
+</html>

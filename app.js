@@ -844,6 +844,4 @@ $(document).ready(function () {
   }
 
   init();
-
-
 });

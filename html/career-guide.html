@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cẩm Nang Việc Làm - JobsLink.vn</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ================= Global ================= */
+      body {
+        margin: 0;
+        font-family: "Lato", sans-serif;
+        background: #f5f6fb;
+        color: #1e1e1e;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: #4c50d3;
+      }
+
+      a:hover {
+        color: #ffce00;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #4c50d3;
+        margin-bottom: 10px;
+      }
+
+      h2::after {
+        content: "";
+        width: 50px;
+        height: 3px;
+        background: #ffce00;
+        display: block;
+        margin-top: 6px;
+        border-radius: 2px;
+      }
+
+      /* ================= Header ================= */
+      header {
+        background: #4c50d3;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 32px;
+      }
+
+      /* ================= Categories ================= */
+      .categories {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin: 40px 0;
+      }
+
+      .category-card {
+        background: #fff;
+        flex: 1 1 200px;
+        max-width: 250px;
+        padding: 20px;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        cursor: pointer;
+      }
+
+      .category-card:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      /* ================= Articles List ================= */
+      .articles {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-bottom: 60px;
+      }
+
+      .article-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        cursor: pointer;
+      }
+
+      .article-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15);
+      }
+
+      .article-card h3 {
+        font-size: 18px;
+        margin-bottom: 6px;
+        color: #4c50d3;
+      }
+
+      .article-card p {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 8px;
+      }
+
+      .article-card span {
+        font-size: 12px;
+        color: #999;
+      }
+
+      /* ================= Footer ================= */
+      footer {
+        background: #4c50d3;
+        color: #fff;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      footer a {
+        color: #ffce00;
+      }
+
+      /* ================= Responsive ================= */
+      @media (max-width: 992px) {
+        .categories {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .articles {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Cẩm Nang Việc Làm</h1>
+      <p>
+        Mang đến những góc nhìn, câu chuyện và lời khuyên từ những người trong
+        nghề
+      </p>
+    </header>
+
+    <!-- Categories -->
+    <section class="container">
+      <h2>Chuyên mục</h2>
+      <div class="categories">
+        <div class="category-card">Kiến thức kinh tế</div>
+        <div class="category-card">Cẩm nang việc làm</div>
+        <div class="category-card">Bài học thành công</div>
+        <div class="category-card">Biểu mẫu hành chính</div>
+        <div class="category-card">Góc kỹ năng</div>
+        <div class="category-card">TikTok Video</div>
+        <div class="category-card">Tìm việc</div>
+        <div class="category-card">Đổi nghề</div>
+        <div class="category-card">Viết CV / Resume</div>
+        <div class="category-card">Định hướng nghề nghiệp</div>
+      </div>
+    </section>
+
+    <!-- Articles -->
+    <section class="container">
+      <h2>Bài viết nổi bật</h2>
+      <div class="articles">
+        <div class="article-card">
+          <h3>
+            Cán cân xuất nhập khẩu là gì? Những yếu tố tác động đến chỉ số
+          </h3>
+          <span>Thinh - Đăng ngày: 8/10/2025</span>
+          <p>
+            Trong bối cảnh thương mại quốc tế ngày càng mở rộng, cán cân xuất
+            nhập khẩu là gì được xem là chủ đề nhận được sự quan tâm ...
+          </p>
+        </div>
+        <div class="article-card">
+          <h3>Omakase là gì? Top 5 nhà hàng Omakase không thể bỏ qua</h3>
+          <span>CareerLink - Đăng ngày: 23/8/2024</span>
+          <p>
+            Bạn có thể đã nghe nói đến Omakase khi nhắc đến Nhật Bản cùng với
+            hoa anh đào, núi Phú Sĩ hay các kiến trúc đặc trưng ...
+          </p>
+        </div>
+        <div class="article-card">
+          <h3>9 hoạt động giúp khởi đầu năm mới thuận lợi hơn</h3>
+          <span>CareerLink - Đăng ngày: 7/2/2022</span>
+          <p>
+            Khởi đầu năm mới với cảm giác vui vẻ, tươi mới và sẵn sàng đón nhận
+            bất cứ điều gì xảy ra là điều mà bạn nên chú ý ...
+          </p>
+        </div>
+        <div class="article-card">
+          <h3>Hiểu về kỹ năng cứng và cách thể hiện khi tìm việc</h3>
+          <span>CareerLink - Đăng ngày: 24/8/2020</span>
+          <p>
+            Khi nói đến việc tìm ra các kỹ năng phù hợp cho hồ sơ xin việc, các
+            ứng viên thường đánh giá thấp bản thân ...
+          </p>
+        </div>
+        <!-- Thêm các bài viết khác tương tự -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; 2025 JobsLink.vn | Email:
+        <a href="mailto:contact@Jobslink.vn">contact@Jobslink.vn</a> | Điện
+        thoại: 0362207968
+      </p>
+    </footer>
+  </body>
+</html>

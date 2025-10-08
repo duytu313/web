@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Về Chúng Tôi -Jobsink.vn</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ================= Global ================= */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Lato", sans-serif;
+        background: #f5f6fb;
+        color: #1e1e1e;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* ================= Header ================= */
+      header {
+        background: #4c50d3;
+        color: #fff;
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 32px;
+      }
+
+      /* ================= About Us Sections ================= */
+      .about-us {
+        padding: 60px 0;
+      }
+
+      .about-row {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 60px;
+      }
+
+      .about-row.reverse {
+        flex-direction: row-reverse;
+      }
+
+      .about-img img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .about-img img:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-text {
+        flex: 1;
+      }
+
+      .about-text h2 {
+        font-size: 28px;
+        color: #4c50d3;
+        margin-bottom: 15px;
+        position: relative;
+      }
+
+      .about-text h2::after {
+        content: "";
+        width: 50px;
+        height: 3px;
+        background: #ffce00;
+        display: block;
+        margin-top: 6px;
+        border-radius: 2px;
+      }
+
+      .about-text p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      /* ================= Contact ================= */
+      .contact-info {
+        text-align: center;
+        padding: 40px 20px;
+        background: #4c50d3;
+        color: #fff;
+        border-radius: 12px;
+        margin-bottom: 60px;
+      }
+
+      .contact-info a {
+        color: #ffce00;
+      }
+
+      /* ================= Responsive ================= */
+      @media (max-width: 992px) {
+        .about-row {
+          flex-direction: column;
+          text-align: center;
+        }
+        .about-row.reverse {
+          flex-direction: column;
+        }
+        .about-img img {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Về Chúng Tôi - JobsLink.vn</h1>
+    </header>
+
+    <!-- About Us -->
+    <section class="about-us container">
+      <!-- Giới thiệu -->
+      <div class="about-row reverse">
+        <div class="about-img">
+          <img src="images/about-intro.jpg" alt="JobsLink Introduction" />
+        </div>
+        <div class="about-text">
+          <h2>Về chúng tôi</h2>
+          <p>
+            Được thành lập vào năm 2004, JobsLink.vn đã từng bước trở thành cầu
+            nối vững chắc giữa người lao động và nhà tuyển dụng. Chúng tôi
+            chuyên cung cấp dịch vụ tìm kiếm nhân sự quản lý cấp cao và dịch vụ
+            tuyển dụng trực tuyến. Qua đó, nhà tuyển dụng hài lòng, người tìm
+            việc thỏa mãn với khát vọng sự nghiệp.
+          </p>
+        </div>
+      </div>
+
+      <!-- Triết lý kinh doanh -->
+      <div class="about-row">
+        <div class="about-img">
+          <img src="images/about-philosophy.jpg" alt="Business Philosophy" />
+        </div>
+        <div class="about-text">
+          <h2>Triết lý kinh doanh</h2>
+          <p>
+            Với phương châm: “Kết nối thành công mục tiêu nghề nghiệp”,
+            JobsLink.vn nỗ lực tạo ra mối liên kết giữa doanh nghiệp và ứng viên
+            sáng giá nhất.
+          </p>
+        </div>
+      </div>
+
+      <!-- Executive Search -->
+      <div class="about-row reverse">
+        <div class="about-img">
+          <img src="images/executive-search.jpg" alt="Executive Search" />
+        </div>
+        <div class="about-text">
+          <h2>Dịch vụ Executive Search</h2>
+          <p>
+            Giúp nhà tuyển dụng tìm các ứng viên sáng giá, đáp ứng vị trí quản
+            lý chủ chốt với bảo mật thông tin tuyệt đối.
+          </p>
+        </div>
+      </div>
+
+      <!-- Kết nối nguồn lực -->
+      <div class="about-row">
+        <div class="about-img">
+          <img src="images/resource-connection.jpg" alt="Resource Connection" />
+        </div>
+        <div class="about-text">
+          <h2>Kết nối nguồn lực</h2>
+          <p>
+            Chúng tôi trao đổi và gặp gỡ nhà tuyển dụng để hiểu rõ nhu cầu thực
+            tế và tìm kiếm ứng viên phù hợp nhất.
+          </p>
+        </div>
+      </div>
+
+      <!-- Dịch vụ tuyển dụng trên website -->
+      <div class="about-row reverse">
+        <div class="about-img">
+          <img src="images/website-service.jpg" alt="Website Recruitment" />
+        </div>
+        <div class="about-text">
+          <h2>Dịch vụ tuyển dụng trên website</h2>
+          <p>
+            Với hơn 100.000 lượt truy cập mỗi ngày, JobsLink.vn là công cụ hỗ
+            trợ tuyển dụng hiệu quả, tiết kiệm chi phí và đa dạng ngành nghề.
+          </p>
+        </div>
+      </div>
+
+      <!-- Liên hệ -->
+      <div class="contact-info">
+        <h2>Liên hệ</h2>
+        <p>Điện thoại: <a href="tel:0362207968">0362207968</a></p>
+        <p>
+          Email:
+          <a href="mailto:contact@Jobslink.vn">contact@careerlink.vn</a>
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

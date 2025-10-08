@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cẩm nang tuyển dụng - JobsLink</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f9fafb;
+        color: #333;
+      }
+      header {
+        background-color: #1e3a8a;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 28px;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: #2563eb;
+      }
+      nav a {
+        color: white;
+        padding: 12px 18px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      nav a:hover {
+        background-color: #1d4ed8;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 0 20px;
+      }
+      .search-box {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .search-box input {
+        width: 60%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      .category-filter {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .category-filter button {
+        margin: 0 5px;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #2563eb;
+        color: white;
+        cursor: pointer;
+      }
+      .category-filter button:hover {
+        background-color: #1d4ed8;
+      }
+      .article {
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      .article h2 {
+        margin-top: 0;
+        color: #1e3a8a;
+      }
+      .article p {
+        margin: 10px 0;
+      }
+      .article .date {
+        font-size: 14px;
+        color: #555;
+      }
+      footer {
+        background-color: #1e3a8a;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Cẩm nang tuyển dụng - JobsLink</h1>
+      <p>Góc nhìn & lời khuyên về tuyển dụng từ chúng tôi</p>
+    </header>
+
+    <nav>
+      <a href="#">Tất cả</a>
+      <a href="#">Văn hóa doanh nghiệp</a>
+      <a href="#">Nghệ thuật quản lý</a>
+      <a href="#">Bí quyết tuyển dụng</a>
+      <a href="#">Tin nổi bật</a>
+    </nav>
+
+    <div class="container">
+      <div class="search-box">
+        <input type="text" placeholder="Từ khoá tìm kiếm...." />
+      </div>
+
+      <!-- Bài viết -->
+      <div class="article">
+        <h2>HR và Manager “lệch pha” khi tuyển dụng: làm sao để đồng điệu?</h2>
+        <p class="category">Nghệ thuật quản lý</p>
+        <p class="date">Đăng ngày: 7/10/2025</p>
+        <p>
+          Tuyển dụng không chỉ đơn thuần là việc tìm người phù hợp mà đó là cả
+          một hành trình cần sự phối hợp nhịp nhàng…
+        </p>
+      </div>
+
+      <div class="article">
+        <h2>
+          Giao việc thử thách cho nhân viên: tạo cơ hội hay thêm gánh nặng?
+        </h2>
+        <p class="category">Nghệ thuật quản lý</p>
+        <p class="date">Đăng ngày: 29/9/2025</p>
+        <p>
+          Trong môi trường làm việc hiện đại, việc để nhân viên “lấn sân” sang
+          những vai trò mới không phải là chuyện lạ, thậm chí…
+        </p>
+      </div>
+
+      <div class="article">
+        <h2>5 dấu hiệu nhận biết ứng viên “diễn sâu” trong buổi phỏng vấn</h2>
+        <p class="category">Bí quyết tuyển dụng</p>
+        <p class="date">Đăng ngày: 22/9/2025</p>
+        <p>
+          Buổi phỏng vấn diễn ra gần như hoàn hảo: ứng viên trả lời mạch lạc, tự
+          tin, nhưng làm sao nhận biết dấu hiệu “diễn sâu”? …
+        </p>
+      </div>
+
+      <div class="article">
+        <h2>Đánh giá thử việc: làm sao để vừa chặt vừa chất?</h2>
+        <p class="category">Bí quyết tuyển dụng</p>
+        <p class="date">Đăng ngày: 22/9/2025</p>
+        <p>
+          Giai đoạn thử việc là khoảng thời gian để cả nhân viên mới và công ty
+          cùng tìm hiểu, đánh giá mức độ phù hợp …
+        </p>
+      </div>
+
+      <div class="article">
+        <h2>
+          Thu hút ứng viên thụ động – cuộc chơi của nhà tuyển dụng tinh tế
+        </h2>
+        <p class="category">Văn hóa doanh nghiệp</p>
+        <p class="date">Đăng ngày: 28/7/2025</p>
+        <p>
+          Trong hành trình tìm kiếm những nhân tố xuất sắc nhất, có một thực tế
+          rõ ràng rằng không phải lúc nào ứng viên giỏi cũng chủ động ứng tuyển
+          …
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 JobsLink Co., Ltd. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
